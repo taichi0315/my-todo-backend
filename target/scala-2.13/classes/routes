@@ -1,1 +1,1 @@
-GET    /    controllers.HelloController.get()
+GET    /todos    controllers.TodoController.get()

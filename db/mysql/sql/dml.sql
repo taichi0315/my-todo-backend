@@ -1,0 +1,10 @@
+INSERT INTO todos(name,state,due_date) VALUES ('todo1','ready','2019-12-29');
+INSERT INTO todos(name,state,due_date) VALUES ('todo2','ready','2019-12-29');
+INSERT INTO todos(name,state,due_date) VALUES ('todo3','ready','2019-12-30');
+INSERT INTO todos(name,state,due_date) VALUES ('todo4','ready','2019-12-31');
+INSERT INTO todos(name,state,due_date) VALUES ('todo5','ready','2020-1-1');
+INSERT INTO todos(name,state,due_date) VALUES ('todo6','doing','2019-12-29');
+INSERT INTO todos(name,state,due_date) VALUES ('todo7','doing','2019-12-30');
+INSERT INTO todos(name,state,due_date) VALUES ('todo8','done','2019-12-12');
+INSERT INTO todos(name,state,due_date) VALUES ('todo9','done','2019-12-28');
+INSERT INTO todos(name,state,due_date) VALUES ('todo10','done','2020-1-30');

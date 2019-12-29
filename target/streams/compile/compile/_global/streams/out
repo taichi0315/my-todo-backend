@@ -1,18 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:10:25: object dao is not a member of package persistence.todo[0m
-[0m[[0m[31merror[0m] [0m[0mimport persistence.todo.dao.TodoDAO[0m
-[0m[[0m[31merror[0m] [0m[0m                        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:13:13: not found: type TodoDAO[0m
-[0m[[0m[31merror[0m] [0m[0m  todoDao:  TodoDAO,[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:12:25: object model is not a member of package persistence.user[0m
-[0m[[0m[31merror[0m] [0m[0mimport persistence.user.model.User[0m
-[0m[[0m[31merror[0m] [0m[0m                        ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:26:43: not found: type User[0m
-[0m[[0m[31merror[0m] [0m[0m  class UserTable(tag: Tag) extends Table[User](tag, "users") {[0m
-[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:21:27: not found: type User[0m
-[0m[[0m[31merror[0m] [0m[0m  def findAll: Future[Seq[User]] = [0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:28:28: not found: value User[0m
-[0m[[0m[31merror[0m] [0m[0m    def id        = column[User.Id]       ("id")[0m
-[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:37:32: not found: value User[0m
+[0m[[0m[31merror[0m] [0m[0m      (v: TableElementType) => User.unapply(v)[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

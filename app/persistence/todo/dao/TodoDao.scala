@@ -1,40 +1,40 @@
-package persistence.user.dao
+package persistence.todo.dao
 
 
 import javax.inject.Inject
-import java.time.LocalDateTime
+import java.time.LocalDate
 import scala.concurrent.Future
 
 import slick.jdbc.JdbcProfile
 import play.api.db.slick.DatabaseConfigProvider
 import play.api.db.slick.HasDatabaseConfigProvider
 
-import persistence.user.model.User
+import persistence.todo.model.Todo
 
-class UserDAO @Inject()(
+class TodoDAO @Inject()(
   val dbConfigProvider: DatabaseConfigProvider
 ) extends HasDatabaseConfigProvider[JdbcProfile] {
   import profile.api._
 
-  lazy val slick = TableQuery[UserTable]
+  lazy val slick = TableQuery[TodoTable]
 
-  def findAll: Future[Seq[User]] = 
+  def findAll: Future[Seq[Todo]] = 
     db.run {
       slick.result
     }
 
-  class UserTable(tag: Tag) extends Table[User](tag, "users") {
+  class TodoTable(tag: Tag) extends Table[Todo](tag, "todos") {
 
-    def id        = column[User.Id]       ("id")
+    def id        = column[Todo.Id]       ("id")
     def name      = column[String]        ("name")
-    def email     = column[String]        ("email")
-    def password  = column[String]        ("password")
+    def state     = column[String]        ("state")
+    def dueDate   = column[LocalDate]     ("due_date")
     
     def * = (
-      id.?, name, email, password
+      id.?, name, state, dueDate
     ) <> (
-      (User.apply _).tupled,
-      (v: TableElementType) => User.unapply(v)
+      (Todo.apply _).tupled,
+      (v: TableElementType) => Todo.unapply(v)
     )
   }
 }

@@ -7,19 +7,19 @@ import play.api.mvc.ControllerComponents
 import play.api.mvc.Action
 import play.api.libs.json._
 
-import persistence.user.dao.UserDAO
+import persistence.todo.dao.TodoDAO
 
-class HelloController @Inject() (
-  userDao:  UserDAO,
+class TodoController @Inject() (
+  todoDao:  TodoDAO,
   cc:       ControllerComponents
 ) extends AbstractController(cc) {
   implicit lazy val executionContext = defaultExecutionContext
 
   def get = Action.async { implicit request =>
     for {
-      userSeq <- userDao.findAll
+      todoSeq <- todoDao.findAll
     } yield {
-      Ok(Json.toJson(userSeq))
+      Ok(Json.toJson(todoSeq))
     }
   }
 }

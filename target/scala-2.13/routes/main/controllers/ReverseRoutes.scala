@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Sun Dec 29 19:26:24 JST 2019
+// @DATE:Sun Dec 29 20:11:14 JST 2019
 
 import play.api.mvc.Call
 
@@ -11,7 +11,7 @@ import _root_.controllers.Assets.Asset
 package controllers {
 
   // @LINE:1
-  class ReverseHelloController(_prefix: => String) {
+  class ReverseTodoController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
@@ -20,7 +20,7 @@ package controllers {
     // @LINE:1
     def get(): Call = {
       
-      Call("GET", _prefix)
+      Call("GET", _prefix + { _defaultPrefix } + "todos")
     }
   
   }

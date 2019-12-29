@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Sun Dec 29 19:26:24 JST 2019
+// @DATE:Sun Dec 29 20:11:14 JST 2019
 
 
 package router {

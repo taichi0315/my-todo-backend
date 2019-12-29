@@ -1,0 +1,1 @@
+mysql -u user -ppassword mfm_api < "/docker-entrypoint-initdb.d/ddl.sql"

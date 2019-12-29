@@ -4,7 +4,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: mfm_api
+      MYSQL_DATABASE: todo_api
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       TZ: Asia/Tokyo

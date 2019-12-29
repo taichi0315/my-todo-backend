@@ -10,7 +10,7 @@ services:
       TZ: Asia/Tokyo
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     ports:
-      - 3306:3306
+      - 33060:3306
     volumes:
       - ./db/mysql/conf.d:/etc/mysql/conf.d
       - ./db/mysql/sql:/docker-entrypoint-initdb.d

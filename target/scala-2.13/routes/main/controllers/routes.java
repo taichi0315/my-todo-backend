@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/kushirotaichi/Desktop/movies-for-me-backend-scala/conf/routes
-// @DATE:Sat Dec 07 18:15:05 JST 2019
+// @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
+// @DATE:Sun Dec 29 19:26:24 JST 2019
 
 package controllers;
 

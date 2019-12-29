@@ -1,19 +1,18 @@
-package persistence.user.model
+package persistence.todo.model
 
 import play.api.data._
-import play.api.data.Forms._
-import java.time.LocalDateTime
+import java.time.LocalDate
 import play.api.libs.json._
 
-case class User(
-  id:        Option[User.Id],                 
+case class Todo(
+  id:        Option[Todo.Id],                 
   name:      String,                            
-  email:     String,
-  password:  String,                           
+  state:     String,
+  dueDate:   LocalDate,                           
 )
 
-object User {
-  type Id = String
+object Todo {
+  type Id = Int
 
-  implicit val userFormat = Json.format[User]
+  implicit val todoFormat = Json.format[Todo]
 }

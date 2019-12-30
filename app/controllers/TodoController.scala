@@ -16,7 +16,7 @@ class TodoController @Inject() (
 ) extends AbstractController(cc) {  
   implicit lazy val executionContext = defaultExecutionContext
 
-  def get(state: String) = 
+  def list(state: String) = 
     Action.async { implicit request =>
       for {
         todoSeq <- todoDao.findByState(state)

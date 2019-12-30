@@ -1,19 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: パッケージrouterは存在しません[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers.javascript[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   変数 RoutesPrefix[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: クラス controllers.routes[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers.javascript[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   変数 RoutesPrefix[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: クラス controllers.routes.javascript[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:54:4: procedure syntax is deprecated: instead, add `: Unit` to explicitly declare `update`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m  }[0m
+[0m[[0m[33mwarn[0m] [0m[0m   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:33:39: ']' expected but ':' found.[0m
+[0m[[0m[31merror[0m] [0m[0m  def update(id: Option[Todo.Id, state: String) =[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

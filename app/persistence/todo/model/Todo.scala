@@ -14,5 +14,6 @@ case class Todo(
 object Todo {
   type Id = Int
 
+  implicit val todoReads = Json.reads[Todo]
   implicit val todoFormat = Json.format[Todo]
 }

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 11:29:30 JST 2019
+// @DATE:Mon Dec 30 15:59:52 JST 2019
 
 import play.api.mvc.Call
 
@@ -16,6 +16,12 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:3
+    def update(): Call = {
+      
+      Call("PUT", _prefix + { _defaultPrefix } + "todos/update")
+    }
   
     // @LINE:1
     def get(state:String): Call = {

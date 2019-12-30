@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 11:29:30 JST 2019
+// @DATE:Mon Dec 30 15:59:52 JST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -17,6 +17,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:3
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.TodoController.update",
+      """
+        function() {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "todos/update"})
+        }
+      """
+    )
   
     // @LINE:1
     def get: JavaScriptReverseRoute = JavaScriptReverseRoute(

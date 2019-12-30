@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Sun Dec 29 20:11:14 JST 2019
+// @DATE:Mon Dec 30 11:29:30 JST 2019
 
 package router
 
@@ -35,7 +35,7 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos""", """controllers.TodoController.get()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos""", """controllers.TodoController.get(state:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -48,12 +48,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todos")))
   )
   private[this] lazy val controllers_TodoController_get0_invoker = createInvoker(
-    TodoController_0.get(),
+    TodoController_0.get(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.TodoController",
       "get",
-      Nil,
+      Seq(classOf[String]),
       "GET",
       this.prefix + """todos""",
       """""",
@@ -66,8 +66,8 @@ class Routes(
   
     // @LINE:1
     case controllers_TodoController_get0_route(params@_) =>
-      call { 
-        controllers_TodoController_get0_invoker.call(TodoController_0.get())
+      call(params.fromQuery[String]("state", None)) { (state) =>
+        controllers_TodoController_get0_invoker.call(TodoController_0.get(state))
       }
   }
 }

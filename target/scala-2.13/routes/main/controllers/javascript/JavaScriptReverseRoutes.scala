@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 15:59:52 JST 2019
+// @DATE:Mon Dec 30 19:18:48 JST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -23,17 +23,17 @@ package controllers.javascript {
       "controllers.TodoController.update",
       """
         function() {
-          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "todos/update"})
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "todo/update"})
         }
       """
     )
   
     // @LINE:1
-    def get: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.TodoController.get",
+    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.TodoController.list",
       """
         function(state0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "todos" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("state", state0)])})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "todo/list" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("state", state0)])})
         }
       """
     )

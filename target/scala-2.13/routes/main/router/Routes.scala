@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 15:59:52 JST 2019
+// @DATE:Mon Dec 30 19:18:48 JST 2019
 
 package router
 
@@ -35,8 +35,8 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos""", """controllers.TodoController.get(state:String)"""),
-    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos/update""", """controllers.TodoController.update()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todo/list""", """controllers.TodoController.list(state:String)"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todo/update""", """controllers.TodoController.update()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -45,18 +45,18 @@ class Routes(
 
 
   // @LINE:1
-  private[this] lazy val controllers_TodoController_get0_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todos")))
+  private[this] lazy val controllers_TodoController_list0_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todo/list")))
   )
-  private[this] lazy val controllers_TodoController_get0_invoker = createInvoker(
-    TodoController_0.get(fakeValue[String]),
+  private[this] lazy val controllers_TodoController_list0_invoker = createInvoker(
+    TodoController_0.list(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.TodoController",
-      "get",
+      "list",
       Seq(classOf[String]),
       "GET",
-      this.prefix + """todos""",
+      this.prefix + """todo/list""",
       """""",
       Seq()
     )
@@ -64,7 +64,7 @@ class Routes(
 
   // @LINE:3
   private[this] lazy val controllers_TodoController_update1_route = Route("PUT",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todos/update")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todo/update")))
   )
   private[this] lazy val controllers_TodoController_update1_invoker = createInvoker(
     TodoController_0.update(),
@@ -74,7 +74,7 @@ class Routes(
       "update",
       Nil,
       "PUT",
-      this.prefix + """todos/update""",
+      this.prefix + """todo/update""",
       """""",
       Seq()
     )
@@ -84,9 +84,9 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:1
-    case controllers_TodoController_get0_route(params@_) =>
+    case controllers_TodoController_list0_route(params@_) =>
       call(params.fromQuery[String]("state", None)) { (state) =>
-        controllers_TodoController_get0_invoker.call(TodoController_0.get(state))
+        controllers_TodoController_list0_invoker.call(TodoController_0.list(state))
       }
   
     // @LINE:3

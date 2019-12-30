@@ -1,3 +1,3 @@
-GET    /todos               controllers.TodoController.get(state: String)
+GET    /todo/list          controllers.TodoController.list(state: String)
 
-PUT    /todos/update        controllers.TodoController.update()
+PUT    /todo/update        controllers.TodoController.update()

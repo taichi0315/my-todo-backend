@@ -1,4 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:37:32: not found: value User[0m
-[0m[[0m[31merror[0m] [0m[0m      (v: TableElementType) => User.unapply(v)[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:19:12: overloaded method value async with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  [A](bodyParser: play.api.mvc.BodyParser[A])(block: play.api.mvc.Request[A] => scala.concurrent.Future[play.api.mvc.Result])play.api.mvc.Action[A] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (block: play.api.mvc.Request[play.api.mvc.AnyContent] => scala.concurrent.Future[play.api.mvc.Result])play.api.mvc.Action[play.api.mvc.AnyContent] <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (block: => scala.concurrent.Future[play.api.mvc.Result])play.api.mvc.Action[play.api.mvc.AnyContent][0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (play.api.mvc.Result)[0m
+[0m[[0m[31merror[0m] [0m[0m    Action.async {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

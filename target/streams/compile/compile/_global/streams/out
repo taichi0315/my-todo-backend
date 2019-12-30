@@ -1,8 +1,19 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:19:12: overloaded method value async with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  [A](bodyParser: play.api.mvc.BodyParser[A])(block: play.api.mvc.Request[A] => scala.concurrent.Future[play.api.mvc.Result])play.api.mvc.Action[A] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (block: play.api.mvc.Request[play.api.mvc.AnyContent] => scala.concurrent.Future[play.api.mvc.Result])play.api.mvc.Action[play.api.mvc.AnyContent] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (block: => scala.concurrent.Future[play.api.mvc.Result])play.api.mvc.Action[play.api.mvc.AnyContent][0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (play.api.mvc.Result)[0m
-[0m[[0m[31merror[0m] [0m[0m    Action.async {[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: パッケージrouterは存在しません[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
+[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
+[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
+[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
+[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers.javascript[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
+[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
+[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
+[0m[[0m[31merror[0m] [0m[0m  シンボル:   変数 RoutesPrefix[0m
+[0m[[0m[31merror[0m] [0m[0m  場所: クラス controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
+[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
+[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers.javascript[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
+[0m[[0m[31merror[0m] [0m[0m  シンボル:   変数 RoutesPrefix[0m
+[0m[[0m[31merror[0m] [0m[0m  場所: クラス controllers.routes.javascript[0m

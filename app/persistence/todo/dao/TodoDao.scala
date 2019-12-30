@@ -22,6 +22,13 @@ class TodoDAO @Inject()(
     db.run {
       slick.result
     }
+  
+  def findByState(state: String): Future[Seq[Todo]] =
+    db.run {
+      slick
+        .filter(_.state === state)
+        .result
+    }
 
   class TodoTable(tag: Tag) extends Table[Todo](tag, "todos") {
 

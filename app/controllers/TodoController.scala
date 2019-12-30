@@ -15,10 +15,10 @@ class TodoController @Inject() (
 ) extends AbstractController(cc) {
   implicit lazy val executionContext = defaultExecutionContext
 
-  def get(state: Option[String]) = 
+  def get(state: String) = 
     Action.async { implicit request =>
       for {
-        todoSeq <- todoDao.findAll
+        todoSeq <- todoDao.findByState(state)
       } yield {
         Ok(Json.toJson(todoSeq))
       }

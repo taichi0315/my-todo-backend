@@ -23,4 +23,8 @@ class TodoController @Inject() (
         Ok(Json.toJson(todoSeq))
       }
     }
+  def update(id: Int) =
+    Action { implicit request =>
+      Ok("Hello World")
+    }
 }

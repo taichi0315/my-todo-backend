@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 11:29:30 JST 2019
+// @DATE:Mon Dec 30 14:17:33 JST 2019
 
 package router
 
@@ -36,6 +36,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos""", """controllers.TodoController.get(state:String)"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos/""" + "$" + """id<[^/]+>/update""", """controllers.TodoController.update(id:Int)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -61,6 +62,24 @@ class Routes(
     )
   )
 
+  // @LINE:3
+  private[this] lazy val controllers_TodoController_update1_route = Route("PUT",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todos/"), DynamicPart("id", """[^/]+""",true), StaticPart("/update")))
+  )
+  private[this] lazy val controllers_TodoController_update1_invoker = createInvoker(
+    TodoController_0.update(fakeValue[Int]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.TodoController",
+      "update",
+      Seq(classOf[Int]),
+      "PUT",
+      this.prefix + """todos/""" + "$" + """id<[^/]+>/update""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -68,6 +87,12 @@ class Routes(
     case controllers_TodoController_get0_route(params@_) =>
       call(params.fromQuery[String]("state", None)) { (state) =>
         controllers_TodoController_get0_invoker.call(TodoController_0.get(state))
+      }
+  
+    // @LINE:3
+    case controllers_TodoController_update1_route(params@_) =>
+      call(params.fromPath[Int]("id", None)) { (id) =>
+        controllers_TodoController_update1_invoker.call(TodoController_0.update(id))
       }
   }
 }

@@ -8,11 +8,12 @@ import play.api.mvc.Action
 import play.api.libs.json._
 
 import persistence.todo.dao.TodoDAO
+import persistence.todo.model.Todo
 
 class TodoController @Inject() (
   todoDao:  TodoDAO,
   cc:       ControllerComponents
-) extends AbstractController(cc) {
+) extends AbstractController(cc) {  
   implicit lazy val executionContext = defaultExecutionContext
 
   def get(state: String) = 
@@ -21,6 +22,19 @@ class TodoController @Inject() (
         todoSeq <- todoDao.findByState(state)
       } yield {
         Ok(Json.toJson(todoSeq))
+      }
+    }
+  def update =
+    Action(parse.json) { implicit request =>
+      val json: JsValue = request.body
+      val todoFromJson: JsResult[Todo] = Json.fromJson[Todo](json)
+
+      todoFromJson match {
+        case JsSuccess(todo: Todo, path: JsPath) =>
+          todoDao.update(todo.id, todo.state)
+          Ok("Success")
+        case e @ JsError(_) =>
+          BadRequest("Errors:" + JsError.toJson(e).toString())
       }
     }
 }

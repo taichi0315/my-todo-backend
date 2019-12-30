@@ -30,6 +30,14 @@ class TodoDAO @Inject()(
         .result
     }
 
+  def update =
+    db.run {
+      slick
+        .filter(_.id === 1)
+        .map(todo => todo.state)
+        .update("done")
+    }
+
   class TodoTable(tag: Tag) extends Table[Todo](tag, "todos") {
 
     def id        = column[Todo.Id]       ("id")

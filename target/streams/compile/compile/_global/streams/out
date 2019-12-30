@@ -1,12 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers.javascript[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes: シンボルを見つけられません[0m
-[0m[[0m[31merror[0m] [0m[0m  シンボル:   クラス ReverseTodoController[0m
-[0m[[0m[31merror[0m] [0m[0m  場所: パッケージ controllers.javascript[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:29:7: Unmatched closing brace '}' ignored here[0m
+[0m[[0m[31merror[0m] [0m[0m      } yield {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:29:9: ';' expected but 'yield' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      } yield {[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

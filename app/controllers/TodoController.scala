@@ -25,6 +25,7 @@ class TodoController @Inject() (
     }
   def update(id: Int) =
     Action { implicit request =>
-      Ok("Hello World")
+      todoDao.update
+      Ok("Success")
     }
 }

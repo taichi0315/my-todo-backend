@@ -30,10 +30,10 @@ class TodoDAO @Inject()(
         .result
     }
 
-  def update =
+  def update(id: Int) =
     db.run {
       slick
-        .filter(_.id === 1)
+        .filter(_.id === id)
         .map(todo => todo.state)
         .update("done")
     }

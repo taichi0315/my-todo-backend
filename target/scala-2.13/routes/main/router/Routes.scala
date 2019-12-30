@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 14:17:33 JST 2019
+// @DATE:Mon Dec 30 15:59:52 JST 2019
 
 package router
 
@@ -36,7 +36,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos""", """controllers.TodoController.get(state:String)"""),
-    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos/""" + "$" + """id<[^/]+>/update""", """controllers.TodoController.update(id:Int)"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todos/update""", """controllers.TodoController.update()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -64,17 +64,17 @@ class Routes(
 
   // @LINE:3
   private[this] lazy val controllers_TodoController_update1_route = Route("PUT",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todos/"), DynamicPart("id", """[^/]+""",true), StaticPart("/update")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todos/update")))
   )
   private[this] lazy val controllers_TodoController_update1_invoker = createInvoker(
-    TodoController_0.update(fakeValue[Int]),
+    TodoController_0.update(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.TodoController",
       "update",
-      Seq(classOf[Int]),
+      Nil,
       "PUT",
-      this.prefix + """todos/""" + "$" + """id<[^/]+>/update""",
+      this.prefix + """todos/update""",
       """""",
       Seq()
     )
@@ -91,8 +91,8 @@ class Routes(
   
     // @LINE:3
     case controllers_TodoController_update1_route(params@_) =>
-      call(params.fromPath[Int]("id", None)) { (id) =>
-        controllers_TodoController_update1_invoker.call(TodoController_0.update(id))
+      call { 
+        controllers_TodoController_update1_invoker.call(TodoController_0.update())
       }
   }
 }

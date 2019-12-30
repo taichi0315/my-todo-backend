@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 14:17:33 JST 2019
+// @DATE:Mon Dec 30 15:59:52 JST 2019
 
 import play.api.mvc.Call
 
@@ -18,9 +18,9 @@ package controllers {
 
   
     // @LINE:3
-    def update(id:Int): Call = {
+    def update(): Call = {
       
-      Call("PUT", _prefix + { _defaultPrefix } + "todos/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Int]].unbind("id", id)) + "/update")
+      Call("PUT", _prefix + { _defaultPrefix } + "todos/update")
     }
   
     // @LINE:1

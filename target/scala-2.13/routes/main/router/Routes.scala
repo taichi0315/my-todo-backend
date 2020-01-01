@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 19:18:48 JST 2019
+// @DATE:Wed Jan 01 10:48:13 JST 2020
 
 package router
 
@@ -35,6 +35,7 @@ class Routes(
   }
 
   def documentation = List(
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todo""", """controllers.TodoController.post()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todo/list""", """controllers.TodoController.list(state:String)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """todo/update""", """controllers.TodoController.update()"""),
     Nil
@@ -45,10 +46,28 @@ class Routes(
 
 
   // @LINE:1
-  private[this] lazy val controllers_TodoController_list0_route = Route("GET",
+  private[this] lazy val controllers_TodoController_post0_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todo")))
+  )
+  private[this] lazy val controllers_TodoController_post0_invoker = createInvoker(
+    TodoController_0.post(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.TodoController",
+      "post",
+      Nil,
+      "POST",
+      this.prefix + """todo""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:3
+  private[this] lazy val controllers_TodoController_list1_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todo/list")))
   )
-  private[this] lazy val controllers_TodoController_list0_invoker = createInvoker(
+  private[this] lazy val controllers_TodoController_list1_invoker = createInvoker(
     TodoController_0.list(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -62,11 +81,11 @@ class Routes(
     )
   )
 
-  // @LINE:3
-  private[this] lazy val controllers_TodoController_update1_route = Route("PUT",
+  // @LINE:5
+  private[this] lazy val controllers_TodoController_update2_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("todo/update")))
   )
-  private[this] lazy val controllers_TodoController_update1_invoker = createInvoker(
+  private[this] lazy val controllers_TodoController_update2_invoker = createInvoker(
     TodoController_0.update(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -84,15 +103,21 @@ class Routes(
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:1
-    case controllers_TodoController_list0_route(params@_) =>
-      call(params.fromQuery[String]("state", None)) { (state) =>
-        controllers_TodoController_list0_invoker.call(TodoController_0.list(state))
+    case controllers_TodoController_post0_route(params@_) =>
+      call { 
+        controllers_TodoController_post0_invoker.call(TodoController_0.post())
       }
   
     // @LINE:3
-    case controllers_TodoController_update1_route(params@_) =>
+    case controllers_TodoController_list1_route(params@_) =>
+      call(params.fromQuery[String]("state", None)) { (state) =>
+        controllers_TodoController_list1_invoker.call(TodoController_0.list(state))
+      }
+  
+    // @LINE:5
+    case controllers_TodoController_update2_route(params@_) =>
       call { 
-        controllers_TodoController_update1_invoker.call(TodoController_0.update())
+        controllers_TodoController_update2_invoker.call(TodoController_0.update())
       }
   }
 }

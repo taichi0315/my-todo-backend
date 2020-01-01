@@ -16,6 +16,20 @@ class TodoController @Inject() (
 ) extends AbstractController(cc) {  
   implicit lazy val executionContext = defaultExecutionContext
 
+  def post =
+    Action(parse.json) { implicit request =>
+      val json: JsValue = request.body
+      val todoFromJson: JsResult[Todo] = Json.fromJson[Todo](json)
+
+      todoFromJson match {
+        case JsSuccess(todo: Todo, path: JsPath) =>
+          todoDao.add(todo)
+          Ok("Success")
+        case e @ JsError(_) =>
+          BadRequest("Errors:" + JsError.toJson(e).toString())
+      }
+    }
+  
   def list(state: String) = 
     Action.async { implicit request =>
       for {

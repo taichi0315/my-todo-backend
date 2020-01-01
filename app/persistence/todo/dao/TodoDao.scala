@@ -18,6 +18,11 @@ class TodoDAO @Inject()(
 
   lazy val slick = TableQuery[TodoTable]
 
+  def add(todo: Todo): Future[Todo.Id] =
+    db.run {
+      slick.map(t => (t.name, t.state, t.dueDate)) += (todo.name, todo.state, todo.dueDate)
+    }
+
   def findAll: Future[Seq[Todo]] = 
     db.run {
       slick.result

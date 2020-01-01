@@ -1,8 +1,11 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:54:4: procedure syntax is deprecated: instead, add `: Unit` to explicitly declare `update`'s return type[0m
-[0m[[0m[33mwarn[0m] [0m[0m  }[0m
-[0m[[0m[33mwarn[0m] [0m[0m   ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/persistence/todo/dao/TodoDao.scala:33:39: ']' expected but ':' found.[0m
-[0m[[0m[31merror[0m] [0m[0m  def update(id: Option[Todo.Id, state: String) =[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:27:13: adaptation of an empty argument list by inserting () is deprecated: this is unlikely to be what you want[0m
+[0m[[0m[33mwarn[0m] [0m[0m        signature: Status.apply[C](content: C)(implicit writeable: play.api.http.Writeable[C]): play.api.mvc.Result[0m
+[0m[[0m[33mwarn[0m] [0m[0m  given arguments: <none>[0m
+[0m[[0m[33mwarn[0m] [0m[0m after adaptation: Status((): Unit)[0m
+[0m[[0m[33mwarn[0m] [0m[0m          Ok()[0m
+[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:27:13: Cannot write an instance of Unit to HTTP response. Try to define a Writeable[Unit][0m
+[0m[[0m[31merror[0m] [0m[0m          Ok()[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

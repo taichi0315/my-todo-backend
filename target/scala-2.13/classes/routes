@@ -1,3 +1,5 @@
+POST   /todo               controllers.TodoController.post()
+
 GET    /todo/list          controllers.TodoController.list(state: String)
 
 PUT    /todo/update        controllers.TodoController.update()

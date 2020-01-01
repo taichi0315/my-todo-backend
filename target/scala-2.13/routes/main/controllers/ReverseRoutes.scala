@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/kushirotaichi/Desktop/my-todo-backend/conf/routes
-// @DATE:Mon Dec 30 19:18:48 JST 2019
+// @DATE:Wed Jan 01 10:48:13 JST 2020
 
 import play.api.mvc.Call
 
@@ -17,13 +17,19 @@ package controllers {
     }
 
   
-    // @LINE:3
+    // @LINE:1
+    def post(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "todo")
+    }
+  
+    // @LINE:5
     def update(): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "todo/update")
     }
   
-    // @LINE:1
+    // @LINE:3
     def list(state:String): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "todo/list" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("state", state)))))

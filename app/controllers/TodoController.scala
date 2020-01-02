@@ -46,7 +46,7 @@ class TodoController @Inject() (
       todoFromJson match {
         case JsSuccess(todo: Todo, path: JsPath) =>
           todoDao.update(todo.id, todo.state)
-          Ok("Success")
+          Ok(Json.toJson(todo))
         case e @ JsError(_) =>
           BadRequest("Errors:" + JsError.toJson(e).toString())
       }

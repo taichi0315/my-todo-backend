@@ -1,11 +1,11 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:27:13: adaptation of an empty argument list by inserting () is deprecated: this is unlikely to be what you want[0m
-[0m[[0m[33mwarn[0m] [0m[0m        signature: Status.apply[C](content: C)(implicit writeable: play.api.http.Writeable[C]): play.api.mvc.Result[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:49:25: adaptation of an empty argument list by inserting () is deprecated: this is unlikely to be what you want[0m
+[0m[[0m[33mwarn[0m] [0m[0m        signature: Json.toJson[T](o: T)(implicit tjs: play.api.libs.json.Writes[T]): play.api.libs.json.JsValue[0m
 [0m[[0m[33mwarn[0m] [0m[0m  given arguments: <none>[0m
-[0m[[0m[33mwarn[0m] [0m[0m after adaptation: Status((): Unit)[0m
-[0m[[0m[33mwarn[0m] [0m[0m          Ok()[0m
-[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:27:13: Cannot write an instance of Unit to HTTP response. Try to define a Writeable[Unit][0m
-[0m[[0m[31merror[0m] [0m[0m          Ok()[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m after adaptation: Json.toJson((): Unit)[0m
+[0m[[0m[33mwarn[0m] [0m[0m          Ok(Json.toJson())[0m
+[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/kushirotaichi/Desktop/my-todo-backend/app/controllers/TodoController.scala:49:25: No Json serializer found for type Unit. Try to implement an implicit Writes or Format for this type.[0m
+[0m[[0m[31merror[0m] [0m[0m          Ok(Json.toJson())[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
